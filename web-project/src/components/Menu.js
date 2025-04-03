@@ -63,11 +63,21 @@ const Menu = () => {
   const handleCardClick = (name) => {
     if (name === "Chinese") {
       window.location.href = "/Chinese.js"; 
-    } else if (name === "Indian") {
-      window.location.href = "/Indian.js";
+    }
+    else if(name === "Indian") {
+      window.location.href = "/Indian.js"; 
+    }
+    else if(name === "Italian") {
+      window.location.href = "/Italian.js"; 
+    }
+    else if(name === "Japanese") {
+      window.location.href = "/Japanese.js"; 
+    }
+    else if(name === "Maxican") {
+      window.location.href = "/Maxican.js"; 
     }
   };
-
+  
   const getCardStyle = (index) => {
     let position = (index - activeIndex + cuisines.length) % cuisines.length;
 
