@@ -1,18 +1,17 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Menu from "./components/Menu";
-import Explore from "./components/Explore";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Hero from "./Hero";
+import Chinese from "./components/Chinese";
 
-const Hero = () => {
+function App() {
   return (
-    <div>
-      <Navbar />
-      <Home />
-      <Menu />
-      <Explore />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Hero />} /> 
+        <Route path="/Chinese.js" element={<Chinese />} /> 
+      </Routes>
+    </Router>
   );
 }
 
-export default Hero;
+export default App;
