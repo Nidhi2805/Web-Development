@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 
 const dishes = [
     { id: 1, name: "Kung Pao Chicken", description: "Spicy, nutty stir-fried chicken with peanuts.", image: "/chinese/kungpao.jpeg" },
@@ -15,7 +15,7 @@ const dishes = [
 ];
 
 const Chinese = () => {
-    const navigate = useNavigate(); // Hook for navigation
+    const navigate = useNavigate(); 
 
     return (
         <div style={{ textAlign: "center", padding: "2rem" }}>
@@ -75,7 +75,7 @@ const Chinese = () => {
                         }}
                         onMouseOver={(e) => e.target.style.backgroundColor = "#cc0000"}
                         onMouseOut={(e) => e.target.style.backgroundColor = "#ff704d"}
-                        onClick={() => navigate("/Addcart.js")} // Redirect to Addcart.js
+                        onClick={() => navigate("/Addcart.js")} 
                         >
                             Add to Cart
                         </button>

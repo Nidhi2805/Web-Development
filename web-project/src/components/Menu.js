@@ -73,8 +73,8 @@ const Menu = () => {
     else if(name === "Japanese") {
       window.location.href = "/Japanese.js"; 
     }
-    else if(name === "Maxican") {
-      window.location.href = "/Maxican.js"; 
+    else if(name === "Mexican") {
+      window.location.href = "/Mexican.js"; 
     }
   };
   

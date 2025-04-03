@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
+
 
 const dishes = [
     { id: 1, name: "Butter Chicken", description: "Tender chicken cooked in a creamy tomato sauce with Indian spices.", image: "/indian/ButterChicken.png" },
@@ -13,12 +15,13 @@ const dishes = [
     { id: 10, name: "Gulab Jamun", description: "Soft, spongy milk solids soaked in rose-flavored syrup.", image: "/indian/GulabJamun.png" }
 ];
 
-
+ 
 const Indian = () =>{
+    const navigate = useNavigate(); 
     return (
         <div style={{ textAlign: "center", padding: "2rem" }}>
-            <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>Imperial Feast</h1>
-            <p style={{ fontSize: "1.5rem", marginBottom: "2rem" }}>Where Tradition Meets the Perfect Bite</p>
+            <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>Spice Kingdom</h1>
+            <p style={{ fontSize: "1.5rem", marginBottom: "2rem" }}>Where Every Dish Tells a Royal Tale</p>
 
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px" }}>
                 {dishes.map((dish) => (
@@ -73,6 +76,7 @@ const Indian = () =>{
                         }}
                         onMouseOver={(e) => e.target.style.backgroundColor = "#cc0000"}
                         onMouseOut={(e) => e.target.style.backgroundColor = "#ff704d"}
+                        onClick={() => navigate("/Addcart.js")} 
                         >
                             Add to Cart
                         </button>

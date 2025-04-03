@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 
 const dishes = [
     { id: 1, name: "Tacos al Pastor", description: "Marinated pork tacos topped with pineapple, onions, and cilantro.", image: "/mexican/TacosAlPastor.png" },
@@ -14,11 +15,12 @@ const dishes = [
 ];
 
 
-const Mexican = () =>{
+const MexicanFood = () =>{
+    const navigate = useNavigate();
     return (
         <div style={{ textAlign: "center", padding: "2rem" }}>
-            <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>Imperial Feast</h1>
-            <p style={{ fontSize: "1.5rem", marginBottom: "2rem" }}>Where Tradition Meets the Perfect Bite</p>
+            <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>THE FIESTA MENU</h1>
+            <p style={{ fontSize: "1.5rem", marginBottom: "2rem" }}>Where Every Bite Dances with Spice</p>
 
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px" }}>
                 {dishes.map((dish) => (
@@ -73,6 +75,7 @@ const Mexican = () =>{
                         }}
                         onMouseOver={(e) => e.target.style.backgroundColor = "#cc0000"}
                         onMouseOut={(e) => e.target.style.backgroundColor = "#ff704d"}
+                        onClick={() => navigate("/Addcart.js")}
                         >
                             Add to Cart
                         </button>
@@ -83,4 +86,4 @@ const Mexican = () =>{
     );
 };
 
-export default Mexican;
+export default MexicanFood;

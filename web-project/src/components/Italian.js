@@ -1,27 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 
-const dishes = [
-    { id: 1, name: "Butter Chicken", description: "Tender chicken cooked in a creamy tomato sauce with Indian spices.", image: "/indian/ButterChicken.png" },
-    { id: 2, name: "Paneer Tikka", description: "Grilled cottage cheese cubes marinated with yogurt and spices.", image: "/indian/PaneerTikka.png" },
-    { id: 3, name: "Biryani", description: "Aromatic rice dish with flavorful spices and tender meat or veggies.", image: "/indian/Biryani.png" },
-    { id: 4, name: "Masala Dosa", description: "Crispy, thin pancake filled with spiced potato stuffing.", image: "/indian/MasalaDosa.png" },
-    { id: 5, name: "Rogan Josh", description: "Slow-cooked lamb in a rich, aromatic curry sauce.", image: "/indian/RoganJosh.png" },
-    { id: 6, name: "Palak Paneer", description: "Cottage cheese cubes cooked in creamy spinach gravy.", image: "/indian/PalakPaneer.png" },
-    { id: 7, name: "Chole Bhature", description: "Spicy chickpea curry served with fluffy deep-fried bread.", image: "/indian/CholeBhature.png" },
-    { id: 8, name: "Samosa", description: "Deep-fried pastry filled with spicy potato and peas.", image: "/indian/Samosa.png" },
-    { id: 9, name: "Tandoori Chicken", description: "Chicken marinated with yogurt and spices, roasted to perfection.", image: "/indian/TandooriChicken.png" },
-    { id: 10, name: "Gulab Jamun", description: "Soft, spongy milk solids soaked in rose-flavored syrup.", image: "/indian/GulabJamun.png" }
+const italianDishes = [
+    { id: 1, name: "Margherita Pizza", description: "Classic pizza with tomato, mozzarella, and fresh basil.", image: "/italian/pizza.jpg" },
+    { id: 2, name: "Lasagna", description: "Layered pasta with rich meat sauce and creamy béchamel.", image: "/italian/Lasagna.jpg" },
+    { id: 3, name: "Spaghetti Carbonara", description: "Pasta with eggs, cheese, pancetta, and pepper.", image: "/italian/SpaghettiCarbonara.jpeg" },
+    { id: 4, name: "Risotto", description: "Creamy Italian rice dish cooked with broth and Parmesan.", image: "/italian/Risotto.jpg" },
+    { id: 5, name: "Tiramisu", description: "Coffee-flavored Italian dessert with layers of mascarpone.", image: "/italian/Tiramisu.jpg" },
+    { id: 6, name: "Fettuccine Alfredo", description: "Pasta tossed in a rich and creamy Parmesan sauce.", image: "/italian/FettuccineAlfredo.jpg" },
+    { id: 7, name: "Bruschetta", description: "Grilled bread topped with fresh tomatoes and basil.", image: "/italian/Bruschetta.jpeg" },
+    { id: 8, name: "Gnocchi", description: "Soft potato dumplings served with sauce.", image: "/italian/Gnocchi.jpg" },
+    { id: 9, name: "Panna Cotta", description: "Silky Italian dessert topped with fruit or caramel.", image: "/italian/PannaCotta.jpg" },
+    { id: 10, name: "Caprese Salad", description: "Fresh tomatoes, mozzarella, basil, and olive oil.", image: "/italian/CapreseSalad.jpeg" }
 ];
 
-
-const Indian = () =>{
+const Italian = () => {
+    const navigate = useNavigate();
     return (
         <div style={{ textAlign: "center", padding: "2rem" }}>
-            <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>Imperial Feast</h1>
-            <p style={{ fontSize: "1.5rem", marginBottom: "2rem" }}>Where Tradition Meets the Perfect Bite</p>
+            <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>La Bella Italia</h1>
+            <p style={{ fontSize: "1.5rem", marginBottom: "2rem" }}>Savor the Authentic Taste of Italy</p>
 
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px" }}>
-                {dishes.map((dish) => (
+                {italianDishes.map((dish) => (
                     <div 
                         key={dish.id} 
                         style={{
@@ -73,6 +74,7 @@ const Indian = () =>{
                         }}
                         onMouseOver={(e) => e.target.style.backgroundColor = "#cc0000"}
                         onMouseOut={(e) => e.target.style.backgroundColor = "#ff704d"}
+                        onClick={() => navigate("/Addcart.js")}
                         >
                             Add to Cart
                         </button>
@@ -83,4 +85,4 @@ const Indian = () =>{
     );
 };
 
-export default Indian;
+export default Italian;
