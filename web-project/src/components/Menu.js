@@ -62,7 +62,9 @@ const Menu = () => {
 
   const handleCardClick = (name) => {
     if (name === "Chinese") {
-      window.location.href = "/chinese.js"; 
+      window.location.href = "/Chinese.js"; 
+    } else if (name === "Indian") {
+      window.location.href = "/Indian.js";
     }
   };
 

@@ -1,22 +1,20 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const dishes = [
-    { id: 1, name: "Kung Pao Chicken", description: "Spicy, nutty stir-fried chicken with peanuts.", image: "/chinese/kungpao.jpeg" },
-    { id: 2, name: "Sweet & Sour Pork", description: "Crispy pork in tangy sweet & sour sauce.", image: "/chinese/sweetsourpork.webp" },
-    { id: 3, name: "Dim Sum", description: "A variety of bite-sized steamed dumplings.", image: "/chinese/dimsum.webp" },
-    { id: 4, name: "Peking Duck", description: "Crispy roasted duck served with pancakes.", image: "/chinese/pekingduck.jpg" },
-    { id: 5, name: "Chow Mein", description: "Stir-fried noodles with vegetables & meat.", image: "/chinese/chowmein.jpg" },
-    { id: 6, name: "Mapo Tofu", description: "Spicy tofu dish with minced pork & chilies.", image: "/chinese/mapotofu.jpg" },
-    { id: 7, name: "Hot & Sour Soup", description: "Savory soup with mushrooms and tofu.", image: "/chinese/hotsour.jpg" },
-    { id: 8, name: "Spring Rolls", description: "Crispy rolls stuffed with veggies & meat.", image: "/chinese/springrolls.jpeg" },
-    { id: 9, name: "Fried Rice", description: "Classic fried rice with eggs & veggies.", image: "/chinese/friedrice.jpg" },
-    { id: 10, name: "Wonton Soup", description: "Dumpling soup with a light broth.", image: "/chinese/wonton.jpeg" }
+    { id: 1, name: "Butter Chicken", description: "Tender chicken cooked in a creamy tomato sauce with Indian spices.", image: "/indian/ButterChicken.png" },
+    { id: 2, name: "Paneer Tikka", description: "Grilled cottage cheese cubes marinated with yogurt and spices.", image: "/indian/PaneerTikka.png" },
+    { id: 3, name: "Biryani", description: "Aromatic rice dish with flavorful spices and tender meat or veggies.", image: "/indian/Biryani.png" },
+    { id: 4, name: "Masala Dosa", description: "Crispy, thin pancake filled with spiced potato stuffing.", image: "/indian/MasalaDosa.png" },
+    { id: 5, name: "Rogan Josh", description: "Slow-cooked lamb in a rich, aromatic curry sauce.", image: "/indian/RoganJosh.png" },
+    { id: 6, name: "Palak Paneer", description: "Cottage cheese cubes cooked in creamy spinach gravy.", image: "/indian/PalakPaneer.png" },
+    { id: 7, name: "Chole Bhature", description: "Spicy chickpea curry served with fluffy deep-fried bread.", image: "/indian/CholeBhature.png" },
+    { id: 8, name: "Samosa", description: "Deep-fried pastry filled with spicy potato and peas.", image: "/indian/Samosa.png" },
+    { id: 9, name: "Tandoori Chicken", description: "Chicken marinated with yogurt and spices, roasted to perfection.", image: "/indian/TandooriChicken.png" },
+    { id: 10, name: "Gulab Jamun", description: "Soft, spongy milk solids soaked in rose-flavored syrup.", image: "/indian/GulabJamun.png" }
 ];
 
-const Chinese = () => {
-    const navigate = useNavigate(); // Hook for navigation
 
+const Indian = () =>{
     return (
         <div style={{ textAlign: "center", padding: "2rem" }}>
             <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>Imperial Feast</h1>
@@ -75,7 +73,6 @@ const Chinese = () => {
                         }}
                         onMouseOver={(e) => e.target.style.backgroundColor = "#cc0000"}
                         onMouseOut={(e) => e.target.style.backgroundColor = "#ff704d"}
-                        onClick={() => navigate("/Addcart.js")} // Redirect to Addcart.js
                         >
                             Add to Cart
                         </button>
@@ -86,4 +83,4 @@ const Chinese = () => {
     );
 };
 
-export default Chinese;
+export default Indian;
