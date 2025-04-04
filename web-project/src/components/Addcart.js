@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "./Navbar";
 
 const dishes = [
     { id: 1, name: "Butter Chicken", description: "Creamy tomato-based curry with tender chicken.", image: "/indian/ButterChicken.png" },
@@ -20,8 +21,9 @@ const AddtoCart = () => {
     };
 
     return (
-        <div style={{ textAlign: "center", padding: "2rem" }}>
-            <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>Cart</h1>
+        <div style={{ textAlign: "center" }}> 
+            <Navbar />
+            <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem", marginTop: "6rem" }}>Cart</h1>
 
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px" }}>
                 {dishes.map((dish) => (

@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom"; 
 
 const japaneseDishes = [
@@ -17,8 +18,9 @@ const japaneseDishes = [
 const Japanese = () => {
     const navigate = useNavigate();
     return (
-        <div style={{ textAlign: "center", padding: "2rem" }}>
-            <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>Taste of Japan</h1>
+        <div style={{ textAlign: "center" }}> 
+            <Navbar />
+            <h1 style={{ fontSize: "3rem", marginBottom: "1rem", marginTop: "6rem" }}>Taste of Japan</h1>
             <p style={{ fontSize: "1.5rem", marginBottom: "2rem" }}>Discover the Delicacies of Japanese Cuisine</p>
 
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px" }}>

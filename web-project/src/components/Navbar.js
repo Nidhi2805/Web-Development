@@ -1,26 +1,70 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleMenuClick = () => {
+    if (location.pathname === "/Hero1.js") {
+      document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/Hero1.js");
+      setTimeout(() => {
+        document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  const handleExploreClick = () => {
+    if (location.pathname === "/Hero1.js") {
+      document.getElementById("explore")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/Hero1.js");
+      setTimeout(() => {
+        document.getElementById("explore")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  const handleAboutClick = () => {
+    if (location.pathname === "/Hero1.js") {
+      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/Hero1.js");
+      setTimeout(() => {
+        document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   const navStyles = {
+    position: "fixed", 
+    top: 0,
+    left: 0,
+    width: "100%",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     padding: "10px 20px",
     backgroundColor: "white",
-    color: "white",
+    color: "black",
+    zIndex: 1000, 
+    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", 
   };
 
   const logoContainer = {
     display: "flex",
     alignItems: "center",
-    gap: "4px", 
+    gap: "4px",
   };
 
   const navLinks = {
     listStyle: "none",
     display: "flex",
     gap: "15px",
-    marginLeft: "60rem", 
+    marginLeft: "60rem",
+    padding: 0,
   };
 
   const linkStyle = {
@@ -28,17 +72,19 @@ const Navbar = () => {
     textDecoration: "none",
     fontSize: "14px",
     cursor: "pointer",
+    background: "none",
+    border: "none",
   };
 
   const buttonStyle = {
-    backgroundColor: "black", 
+    backgroundColor: "black",
     color: "white",
     padding: "8px 16px",
     fontSize: "14px",
     border: "none",
     borderRadius: "20px",
     cursor: "pointer",
-    marginLeft: "10px", 
+    marginRight: "3rem",
   };
 
   return (
@@ -48,12 +94,12 @@ const Navbar = () => {
         <h1 style={{ fontSize: "18px", margin: 0, color: "black" }}>Flavourful Fare</h1>
       </div>
       <ul style={navLinks}>
-        <li><a href="#" style={linkStyle}>Home</a></li>
-        <li><a href="#" style={linkStyle}>Menu</a></li>
-        <li><a href="#" style={linkStyle}>Explore</a></li>
-        <li><a href="#" style={linkStyle}>About</a></li>
+        <li><button style={linkStyle} onClick={() => navigate("/Hero1.js")}>Home</button></li>
+        <li><button style={linkStyle} onClick={handleMenuClick}>Menu</button></li>
+        <li><button style={linkStyle} onClick={handleExploreClick}>Explore</button></li>
+        <li><button style={linkStyle} onClick={handleAboutClick}>About</button></li>
       </ul>
-      <button style={buttonStyle}>Order</button>
+      <button style={buttonStyle} onClick={() => navigate("/AddCart.js")}>Order</button> 
     </nav>
   );
 };

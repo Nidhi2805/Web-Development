@@ -18,7 +18,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div
+    <div id="home"
       style={{
         overflowX: "hidden", 
       }}
@@ -31,6 +31,7 @@ const Home = () => {
           justifyContent: "center",
           alignItems: "center",
           overflow: "hidden", 
+          marginTop: "4.5rem"
         }}
       >
         <img

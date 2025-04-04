@@ -74,7 +74,7 @@ const About = () => {
     };
 
     return (
-        <div style={styles.container}>
+        <div id="about" style={styles.container}>
             <p style={styles.topRightText}>Our Story</p>
             <p style={styles.subText}>
                 At Flavourful Fare, we combine great food with modern convenience, delivering exceptional meals right to your doorstep.

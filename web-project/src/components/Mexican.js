@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom"; 
 
 const dishes = [
@@ -18,8 +19,9 @@ const dishes = [
 const MexicanFood = () =>{
     const navigate = useNavigate();
     return (
-        <div style={{ textAlign: "center", padding: "2rem" }}>
-            <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>THE FIESTA MENU</h1>
+        <div style={{ textAlign: "center" }}> 
+            <Navbar />
+            <h1 style={{ fontSize: "3rem", marginBottom: "1rem", marginTop: "6rem" }}>THE FIESTA MENU</h1>
             <p style={{ fontSize: "1.5rem", marginBottom: "2rem" }}>Where Every Bite Dances with Spice</p>
 
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px" }}>

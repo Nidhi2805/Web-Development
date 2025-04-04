@@ -128,7 +128,7 @@ const Menu = () => {
   };
 
   return (
-    <div>
+    <div id="menu">
       <h1 style={{ textAlign: "center", fontSize: "3rem", fontWeight: "bold" }}>
         Our Delectable Cuisines
       </h1>

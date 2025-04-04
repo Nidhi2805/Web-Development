@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 
-const SignIn = () => {
+const SignIn = ({ onSignIn }) => {
+  const navigate = useNavigate();
+  const handleSignIn = () => {
+    onSignIn(); 
+    navigate("/Hero1.js"); 
+  };
+
   return (
     <div style={{
       display: "flex",
@@ -88,19 +95,21 @@ const SignIn = () => {
           }}>Forgot Password?</a>
         </div>
 
-        <button style={{
-          width: "100%",
-          backgroundColor: "#222", 
-          color: "white",
-          padding: "14px",
-          border: "none",
-          borderRadius: "6px",
-          cursor: "pointer",
-          fontSize: "18px",
-          transition: "background-color 0.3s"
-        }}
-        onMouseOver={(e) => e.target.style.backgroundColor = "#444"} 
-        onMouseOut={(e) => e.target.style.backgroundColor = "#222"} 
+        <button 
+          style={{
+            width: "100%",
+            backgroundColor: "#222", 
+            color: "white",
+            padding: "14px",
+            border: "none",
+            borderRadius: "6px",
+            cursor: "pointer",
+            fontSize: "18px",
+            transition: "background-color 0.3s"
+          }}
+          onMouseOver={(e) => e.target.style.backgroundColor = "#444"} 
+          onMouseOut={(e) => e.target.style.backgroundColor = "#222"} 
+          onClick={() => navigate("/Hero1.js")} 
         >
           Sign In
         </button>

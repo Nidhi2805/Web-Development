@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Nav from "./components/Navbar1";
 import Home from "./components/Home";
 import Menu from "./components/Menu";
 import Explore from "./components/Explore";
@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 const Hero = () => {
   return (
     <div>
-      <Navbar />
+      <Nav />
       <Home />
       <Menu />
       <Explore />

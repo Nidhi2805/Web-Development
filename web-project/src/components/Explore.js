@@ -2,7 +2,7 @@ import React from 'react';
 
 const Explore = () => {
     return (
-        <div style={{ display: 'flex', alignItems: 'center', height: '100vh', width: '80%', margin: '-6rem 0 ' }}>
+        <div id="explore" style={{ display: 'flex', alignItems: 'center', height: '100vh', width: '80%', margin: '-6rem 0 ' }}>
             <img 
                 src="/explore.png" 
                 alt="Explore Image" 
