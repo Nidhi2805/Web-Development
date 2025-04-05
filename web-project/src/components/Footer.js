@@ -57,12 +57,13 @@ const Footer = () => {
                 <img src="/footerlogo.png" alt="Footer Logo" style={styles.image} />
                 <p style={styles.text}>Flavourful Fare</p>
 
-                <div style={styles.contributionContainer}>
-                    <p style={styles.contributionTitle}>Contributions:</p>
-                    <p>Nidhi Anand Karva (23BDS0031) </p>
-                    <p>Aditya Atul Deshmukh (23BAI0072) </p>
-                    <p>Nakul Dipesh Kamdar (23BAI0120) </p>
+                <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", alignItems: "center", marginTop: "20px", color:"white" }}>
+                    <span style={{ fontWeight: "bold" }}>Contributions:</span>
+                    <span>Nidhi Anand Karva (23BDS0031)</span>
+                    <span>Aditya Atul Deshmukh (23BAI0072)</span>
+                    <span>Nakul Dipesh Kamdar (23BAI0120)</span>
                 </div>
+
             </div>
 
             <div style={styles.rightSection}>
