@@ -16,6 +16,17 @@ const Nav = () => {
     }
   };
 
+  const handleMenuClick = () => {
+    if (location.pathname === "../Hero.js") {
+      document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("../Hero.js");
+      setTimeout(() => {
+        document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   const navStyles = {
     position: "fixed",
     top: 0,
@@ -73,7 +84,7 @@ const Nav = () => {
       </div>
       <ul style={navLinks}>
         <li><button style={linkStyle} onClick={() => navigate("../Hero.js")}>Home</button></li>
-        <li><button style={linkStyle} onClick={() => handleScrollOrNavigate("menu")}>Menu</button></li>
+        <li><button style={linkStyle} onClick={() => handleMenuClick("menu")}>Menu</button></li>
         <li><button style={linkStyle} onClick={() => handleScrollOrNavigate("explore")}>Explore</button></li>
         <li><button style={linkStyle} onClick={() => handleScrollOrNavigate("about")}>About</button></li>
       </ul>

@@ -32,7 +32,6 @@ const SignIn = ({ onSignIn }) => {
         zIndex: 1
       }}></div>
 
-      {/* Sign-In Box */}
       <div style={{
         alignItems: "center",
         backgroundColor: "rgba(255, 255, 255, 0.9)", 
