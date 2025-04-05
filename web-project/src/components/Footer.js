@@ -59,9 +59,9 @@ const Footer = () => {
 
                 <div style={styles.contributionContainer}>
                     <p style={styles.contributionTitle}>Contributions:</p>
-                    <p>Nidhi Anand Karva (23BDS0031)</p>
-                    <p>Aditya Atul Deshmukh (23BAI0072)</p>
-                    <p>Nakul Dipesh Kamdar (23BAI0120)</p>
+                    <p>Nidhi Anand Karva (23BDS0031) </p>
+                    <p>Aditya Atul Deshmukh (23BAI0072) </p>
+                    <p>Nakul Dipesh Kamdar (23BAI0120) </p>
                 </div>
             </div>
 
