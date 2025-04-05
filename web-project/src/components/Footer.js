@@ -4,17 +4,17 @@ const Footer = () => {
     const styles = {
         container: {
             backgroundColor: "#232323",
-            minHeight: "10vh", // ✅ Let it expand if content overflows
+            minHeight: "10vh",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             padding: "0 20px",
             overflowY: "hidden",
-            flexWrap: "wrap" // ✅ Allows wrapping on smaller screens
+            flexWrap: "wrap" 
         },
         leftSection: {
             display: "flex",
-            alignItems: "flex-start", // ✅ Align items at the top to fit multi-line contributions
+            alignItems: "flex-start", 
             gap: "1.5rem",
             flexWrap: "wrap",
             marginLeft: "4rem"
